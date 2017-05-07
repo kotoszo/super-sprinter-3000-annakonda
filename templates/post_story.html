@@ -1,0 +1,20 @@
+<html>
+    <p>Hover over the checkbox to simulate a mouse-click.</p>
+
+    <form action="/list">
+    <input type="text" id="myCheck" onclick="myFunction()">
+    <button type="submit" value="Submit" onclick="myFunction()"></button>
+    </form>
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myCheck").value;
+        if (x == "") {
+            alert("lol")
+        }
+    }
+    function myFunction2() {
+        alert("lol")
+    }
+    </script>
+</html>

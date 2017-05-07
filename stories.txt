@@ -1,0 +1,9 @@
+asdasdasdas;asdasdasd;asdasdasd;100;0.5;Planning;
+alma;asldsaj ez az uj;lofasz;100;0.5;Planning;
+test 06 ;askdasjldn;slfisjdf;200;1;In Progress;
+banán;asdasdasd;asdasdasd;100;0.5;Planning;
+ alma;alma1;alma2;100;0.5;Planning;
+ alma2;alma1;alma2;100;0.5;Planning;
+dwasd ;dwasdwa;dsadsd;100;0.5;TODO;
+ test vmi;vmi vmi vmi;ez is meg az is meg amaz is  asédkansld;100;0.5;Planning;
+ 

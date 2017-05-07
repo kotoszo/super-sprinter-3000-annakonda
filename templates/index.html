@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<link href="/static/style.css" rel="stylesheet">
+<html>
+    <head>
+        <title>WoW</title>
+    </head>
+    <body>
+        <h1>User Story Manager</h1>
+
+        <form action="/story">
+        <button type="submit" value="Submit">Add New User Story</button><br><br>
+        </form>
+        
+        <table id="table">
+            <tr>
+                <th> Id </th>
+                <th> Story Title</th>
+                <th> User story </th>
+                <th> Acceptance Criteria </th>
+                <th> Business Value </th>
+                <th> Estimation </th>
+                <th> Status </th>
+                <th> Delete </th>
+            </tr>
+            <tr>
+            {% for row in stories %}
+            <form action="/story/{{ stories.index(row)+1 }}" method="GET">
+            <td><button type="submit">{{ stories.index(row)+1 }} </button></td></form>
+                    {% for cell in row %}
+                            <td>{{ cell }}</td>
+                    {% endfor %}
+                        <td><button name='{{ row[0] }}' id='{{ row[0] }}' onclick="id_to_delete('{{ row[0] }}')" > x </button></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <script>
+            var index, table = document.getElementById('table');
+            for(var i = 0; i < table.rows.length; i++) {
+                table.rows[i].cells[7].onclick = function () {
+                    index = this.parentElement.rowIndex;
+                    table.deleteRow(index);
+                    console.log(index);
+                }
+            }
+            function id_to_delete (id) {
+                document.getElementById(id).setAttribute("name", "delete");
+                console.log(id)
+            }
+        </script>
+    </body>
+</html>
